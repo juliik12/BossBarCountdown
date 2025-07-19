@@ -1,0 +1,58 @@
+name: BossBarCountdown
+version: 1.0
+main: jr.julirexs.BossBarCountdownPlugin
+api-version: 1.13
+author: Julirexs
+
+# Soft-dependency on PlaceholderAPI (funciona si está instalado)
+softdepend:
+  - PlaceholderAPI
+
+commands:
+  bossbar:
+    description: Main command to control BossBars.
+    usage: /<command> <start|stop|reload|test|verify|create|help>
+    aliases: [bb]
+    permission: bossbar.use
+    permission-message: §cYou don't have permission to use this command.
+
+permissions:
+  bossbar.use:
+    description: Allows use of the /bossbar command.
+    default: true
+
+  bossbar.start:
+    description: Allows starting a BossBar countdown.
+    default: op
+
+  bossbar.stop:
+    description: Allows stopping the BossBar.
+    default: op
+
+  bossbar.reload:
+    description: Allows reloading the config.
+    default: op
+
+  bossbar.test:
+    description: Allows testing BossBar finish actions.
+    default: op
+
+  bossbar.verify:
+    description: Allows verifying the configuration for errors.
+    default: op
+
+  bossbar.create:
+    description: Allows creating a BossBar from command.
+    default: op
+
+  bossbar.help:
+    description: Allows viewing the help command.
+    default: true
+
+  bossbar.view.*:
+    description: Allows seeing BossBars of any type (if type is "permission").
+    default: false
+
+  bossbar.view.example:
+    description: Allows seeing the "example" BossBar (if type is "permission").
+    default: true

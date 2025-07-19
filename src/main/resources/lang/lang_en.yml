@@ -1,0 +1,32 @@
+
+no_permission: "&cYou don't have permission to do this."
+no_permission_help: "&cYou don't have permission to view help."
+
+
+unknown_command: "&cUnknown command. Use &e/bossbar help"
+only_players: "&cOnly players can use this command."
+
+invalid_time: "&cInvalid time."
+invalid_type: "&cInvalid bossbar type."
+bossbar_create_error: "&cError creating BossBar. Check color or style."
+
+usage_start: "&cUsage: /bossbar start <type> <seconds>"
+usage_test: "&cUsage: /bossbar test <type>"
+usage_create: "&cUsage: /bossbar create <type> <color> <style>"
+
+bossbar_started: "&aBossBar '&e%tipo%&a' started for &e%segundos%&a seconds."
+bossbar_stopped: "&aBossBar stopped."
+bossbar_created: "&aBossBar '&e%tipo%&a' created with color &e%color%&a and style &e%style%&a."
+config_reloaded: "&aConfiguration reloaded."
+actions_executed: "&aExecuted finish actions for type: &e%tipo%"
+
+config_correct: "&aConfiguration is correct, no errors found."
+config_errors: "&cErrors found in configuration:"
+
+help_header: "&6BossBarCountdown Plugin &7- &eAvailable Commands:"
+help_start: "&e/bossbar start <type> <seconds> &7- Start a BossBar countdown"
+help_stop: "&e/bossbar stop &7- Stop the current BossBar"
+help_reload: "&e/bossbar reload &7- Reload the configuration"
+help_test: "&e/bossbar test <type> &7- Run finish actions of a type"
+help_verify: "&e/bossbar verify &7- Check for config errors"
+help_create: "&e/bossbar create <type> <color> <style> &7- Create a BossBar configuration"

@@ -1,0 +1,55 @@
+# BossBarCountdown Configuration File
+
+# Language file to load for messages.
+# Must match one of the lang_XX.yml files (e.g., lang_en.yml or lang_es.yml)
+lang: en # Require restart
+
+# BossBars are countdowns you can start via commands.
+# Each type must have a unique key under 'bossbars'.
+bossbars:
+
+  example:
+    title: "&eCountdown: &a%time%"
+    color: RED           # Available: BLUE, GREEN, PINK, PURPLE, RED, WHITE, YELLOW
+    style: SEGMENTED_10  # Available: SOLID, SEGMENTED_6, SEGMENTED_10, SEGMENTED_12, SEGMENTED_20
+    type: global         # global = all players; permission = only players with permission "bossbar.view.<type>"
+
+    # Optional actions that trigger when the countdown ends
+    on_finish:
+      repeat: 1           # How many times to repeat the whole sequence
+      delay_between: 1    # Delay between each repetition (in seconds)
+
+      actions:
+        message_welcome:
+          type: message
+          values:
+            - "&6The countdown has ended!"
+            - "&aGood luck, %player%!"
+
+        sound_bell:
+          type: sound
+          values:
+            - "ENTITY_EXPERIENCE_ORB_PICKUP"
+
+        delay_1s:
+          type: message
+          values:
+            - delay: 1
+
+        run_command:
+          type: command
+          values:
+            - "say Countdown over for %player%"
+
+        broadcast_end:
+          type: broadcast
+          values:
+            - "&c[Server] &7%player% finished the countdown!"
+
+        show_title:
+          type: title
+          title: "&aTime's Up!"
+          subtitle: "&eLet's Go!"
+          fadeIn: 10
+          stay: 60
+          fadeOut: 10
